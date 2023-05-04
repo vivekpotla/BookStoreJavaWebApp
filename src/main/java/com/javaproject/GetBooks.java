@@ -21,10 +21,12 @@ public class GetBooks {
 		   while(rs.next()) {
 			   
 			b=new Book();
-			b.name=rs.getString(1);
-			b.author =rs.getString(2);
-			b.cost=rs.getString(3);
-			b.imgURL =rs.getString(4);		
+			b.id=rs.getString(1);
+			System.out.print(b.id);
+			b.name=rs.getString(2);
+			b.author =rs.getString(3);
+			b.cost=rs.getString(4);
+			b.imgURL =rs.getString(5);		
 			list.add(b);			
 		   }		   
 		} catch (Exception e) {
