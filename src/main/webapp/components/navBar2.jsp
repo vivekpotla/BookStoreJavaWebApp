@@ -5,13 +5,15 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto ">
       <li class="nav-item active">
         <a class="nav-link" href="cart.jsp"><i class="fa fa-shopping-cart"></i> <b>My Cart </b> <span class="sr-only">(current)</span></a>
       </li>
       
-      <li class="nav-item active">
-        <a class="nav-link" href="login.jsp"><i class="fas fa-sign-out"></i> <b>Logout</b></a>
+      <li class="nav-item active my-auto px-2">
+        <form name="logoutbutton" action="logout" method="post">
+			<input type="submit" name="fetchdata" value="Logout" class='btn btn-danger my-auto'>
+			</form>
       </li>
       
       

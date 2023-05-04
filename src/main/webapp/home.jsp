@@ -3,6 +3,10 @@
  <%@include file="components/navBar2.jsp"%>
   <%@include file="components/allCSS.jsp"%>
  
+ 
+<% if(session.getAttribute("name")==null){
+	
+};%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +14,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<h2 class='bg-success text-center py-5 my-5'>Login ayyavu ra </h2>
+	<%
+		String user = (String) session.getAttribute("name");
+		
+
+		if (user== null) {
+	%>
+	<script>
+		alert("Login to Continue");
+		window.location.assign("login.jsp");
+	</script>
+	<%
+		}
+	%>
+		<h3 class=' py-2 my-2 ml-2'><i>Welcome <% out.println(session.getAttribute("name")) ;%> ! </i></h3>
+		  <%@include file="components/books.jsp"%>
 		
 </body>
 </html>

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
 <%@page import="com.javaproject.GetBooks"%>
 <%@page import="com.javaproject.Book"%>
 <%@page import="java.util.*"%>
@@ -9,13 +8,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<%@include file="components/allCSS.jsp"%>
 </head>
 <body>
-<%@include file="components/navBar2.jsp"%>
-	<h3 class='text-center bg-success text-white p-2 mt-5 rounded w-50 mx-auto'>My Cart</h3>
 	
-	
+	<div class='text-center bg-info p-2 w-50 rounded mx-auto'>Books </div>
 	<table class="table table-striped w-50 mx-auto">
 							<thead>
 								<tr>
@@ -42,15 +38,12 @@
 									<td><%=b.name %></td>
 									<td><%=b.author %></td>
 									<td>Rs . <%=b.cost %></td>
-									<td><button class='btn btn-primary my-auto'>Remove</button></td>
+									<td><button class='btn btn-primary my-auto'>Add to cart</button></td>
 								</tr>
 								<%
 									}
 								%>
 							</tbody>
 						</table>
-
-	
-	
 </body>
 </html>
