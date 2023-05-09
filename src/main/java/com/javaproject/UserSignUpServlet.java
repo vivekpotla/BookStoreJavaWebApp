@@ -1,6 +1,7 @@
 package com.javaproject;
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -17,12 +18,17 @@ public class UserSignUpServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 		String fullName = req.getParameter("fullName");
 		String email = req.getParameter("email");
         String password = req.getParameter("password");
         String ContactNo = req.getParameter("ContactNo");
 		System.out.println(fullName + email + password + ContactNo);
+		
+		
 		Connection con = DBConnect.getConn();
+		
+		
 		boolean flag= false;
 			try {
 				String sql = "select * from bookusers where email=? ";
@@ -45,6 +51,7 @@ public class UserSignUpServlet extends HttpServlet {
 		{
 						
 			session.setAttribute("msg", "User Already Exists");
+			
 			resp.sendRedirect("signup.jsp?msg=User Already Exists");			
 		}
 		else {
@@ -64,8 +71,7 @@ public class UserSignUpServlet extends HttpServlet {
 				
 			}
 
-			session.setAttribute("email", email);
-			session.setAttribute("name", fullName);
+
 			resp.sendRedirect("signup.jsp?msg=valid");			
 		}
 	}

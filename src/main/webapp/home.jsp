@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <%@include file="components/navBar2.jsp"%>
-  <%@include file="components/allCSS.jsp"%>
+ <%@include file="components/allCSS.jsp"%>
  
  
-<% if(session.getAttribute("name")==null){
-	
-};%>  
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Bookify e-Book Store</title>
+
 </head>
 <body>
+    <%@include file="components/navBar2.jsp"%>
 	<%
 		String user = (String) session.getAttribute("name");
 		

@@ -9,7 +9,8 @@ import java.util.List;
 public class GetBooks {
 	
 	
-	public List<Book> getAllBooks() {  		
+	public static List<Book> getAllBooks() {  		
+		
   		List<Book> list = new ArrayList<Book>();
   		Book b=null;
   		Connection con = DBConnect.getConn();

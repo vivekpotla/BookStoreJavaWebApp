@@ -166,7 +166,7 @@ body{
 <body>
 
 <%
-	String msg = (String) session.getAttribute("msg");
+	String msg = (String) request.getParameter("msg");
 	if ("valid".equals(msg)) {
 %>
 <script>

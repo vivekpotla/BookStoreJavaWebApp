@@ -26,8 +26,8 @@
 %>
 	<h3 class='text-center bg-success text-white p-2 mt-5 rounded w-50 mx-auto'>My Cart</h3>
 	<%
-	GetCart gc = new GetCart();
-    List <Book> list = gc.getAllBooks(); 
+
+    List <Book> list = GetCart.getAllBooks(); 
     
     //Checking for size if empty or not 
     
@@ -38,6 +38,7 @@
     <div class=' display-4 mt-5  text-danger w-50 mx-auto p-3 text-center rounded-pill'>Cart is Empty :)</div>
     
     <%   }
+    
     else {  
     %>
 	

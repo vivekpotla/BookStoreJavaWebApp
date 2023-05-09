@@ -44,8 +44,8 @@
 
 							<tbody>
 								<%
-									GetBooks gb = new GetBooks();
-								    List <Book> list = gb.getAllBooks();
+									
+								    List <Book> list = GetBooks.getAllBooks();
 									int i=0;
 									for (Book b : list) {
 										i++;
